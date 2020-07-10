@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "wysh-atlas": {
+      "hosting": {
+        "wysh-atlas": [
+          "wysh-atlas"
+        ]
+      }
+    }
+  }
+}

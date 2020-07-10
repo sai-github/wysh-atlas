@@ -122,8 +122,13 @@
               "devServerTarget": "wysh-atlas:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "wysh-atlas"
 }
