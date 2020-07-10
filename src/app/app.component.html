@@ -1,1 +1,3 @@
-Hello!
+Hello {{ title }} !
+
+<li *ngFor="let item of items | async">{{ item.msg }}</li>
