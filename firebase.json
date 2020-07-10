@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "wysh-atlas",
+      "public": "dist/wysh-atlas",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
