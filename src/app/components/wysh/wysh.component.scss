@@ -199,10 +199,19 @@
   padding: 0rem 2rem;
 
   font-family: 'Butterfly Kids', cursive;
-  font-size: 2rem;
+  font-size: 1.9rem;
+  font-weight: 600;
+  text-align: center;
 
   border-radius: 50px;
   background: #f2f2f2;
   box-shadow: inset 20px 20px 60px #cecece,
     inset -20px -20px 60px #ffffff;
+}
+
+.spinner-box {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'src/assets/colors.scss';
+@import 'src/assets/screens.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+/**
+* Basic styles for body
+*/
+body {
+  display: flex; /* flex superpowers activaed! */
+  flex-direction: column; /* Stack the flex-items vertically not the default horizontal view */
+
+  background-color: $app-background-color;
+  margin: 0;
+  font-family: Lato, sans-serif;
+  color: $app-font-color;
+  height: 100%;
+}
+
+/**
+* Loading styles
+*/
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -15px 0 0 -15px;
+  height: 30px;
+  width: 30px;
+  border: 2px solid #ddd;
+  border-left-color: #009688;
+  border-radius: 30px; /* border-radius: 50% */
+  -webkit-animation: animation-rotate 950ms
+    cubic-bezier(0.64, 2, 0.56, 0.6) infinite;
+  animation: animation-rotate 950ms cubic-bezier(0.64, 2, 0.56, 0.6)
+    infinite;
+}
+
+@-webkit-keyframes animation-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes animation-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

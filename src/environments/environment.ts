@@ -2,20 +2,12 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyAk7AZPNkmOvReT7BQHOdPjJtWgl8vRUPc',
-  authDomain: 'wysh-atlas.firebaseapp.com',
-  databaseURL: 'https://wysh-atlas.firebaseio.com',
-  projectId: 'wysh-atlas',
-  storageBucket: 'wysh-atlas.appspot.com',
-  messagingSenderId: '185755587529',
-  appId: '1:185755587529:web:d8176d520b6bb659374e18',
-  measurementId: 'G-0RWDXYEF84',
-};
+import { firebaseConfig } from '../environments/firebase-config';
 
 export const environment = {
   production: false,
   firebase: firebaseConfig,
+  wyshAtlasFnURL: 'http://localhost:6001/wysh-atlas/us-central1/',
 };
 
 /*
