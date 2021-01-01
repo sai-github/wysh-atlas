@@ -1,0 +1,51 @@
+<ng-container>
+  <div
+    [ngClass]="'wysh-container'"
+    *ngIf="items$ | async as bday; else noBday"
+  >
+    <!-- Logo -->
+    <div [ngClass]="'title-outter'">
+      <div [ngClass]="'title'">
+        <div [ngClass]="'title-first'">wysh</div>
+        <div [ngClass]="'title-last'">ATLAS</div>
+      </div>
+    </div>
+
+    <!-- Greet -->
+    <div [ngClass]="'greet-container'">
+      <div [ngClass]="'wysh'">
+        {{ wysh$ | async }}
+      </div>
+
+      <div [ngClass]="'image-holder'">
+        <ng-container *ngIf="picURL$ | async as picURL">
+          <img [ngClass]="'dp-styles'" [src]="picURL" />
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- End note -->
+    <div [ngClass]="'end-note-container'">
+      <div [ngClass]="'h-bday'">
+        Happy Birthday
+      </div>
+      <div [ngClass]="'from'">
+        <span>From</span>
+        <!-- make end point for user -->
+        <span>Bhargav</span>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #noBday>
+  <div *ngIf="!isLoading" [ngClass]="'no-bday-container'">
+    <div [ngClass]="'no-bday'">
+      Oh .. day with no friend's birthday
+    </div>
+  </div>
+</ng-template>
+
+<ng-container *ngIf="isLoading">
+  <app-glow-spinner [ngClass]="'spinner-box'"></app-glow-spinner>
+</ng-container>
